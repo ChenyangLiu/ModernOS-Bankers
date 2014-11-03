@@ -10,6 +10,9 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="theBanker_v1.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6A6DCF22-02E9-4A83-98DD-894D2A766873}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
