@@ -1,2 +1,25 @@
 # ModernOS - Bankers
 It's one of the experiment in OS course, Tsinghua University. It solves the bank problem based on mutex and semaphore.
+## Input
+CNO, EnterTime, NeedTime
+
+example:  
+1 1 10  
+2 5 2  
+3 6 3  
+4 6 4  
+5 3 4
+
+## Output
+CNO, EnterTime, ServeTime, ExitTime, TNO
+
+example:
+CNo. 2 Enter: 5 Serve: 5 Exit: 7 TNo. 3  
+CNo. 5 Enter: 3 Serve: 3 Exit: 7 TNo. 2  
+CNo. 3 Enter: 6 Serve: 7 Exit: 10 TNo. 2  
+CNo. 4 Enter: 6 Serve: 7 Exit: 11 TNo. 3  
+CNo. 1 Enter: 1 Serve: 1 Exit: 11 TNo. 1
+
+## Version
+v1:'theBanker_v1.cpp'  
+It uses an int time to sycn. It should crush when lots of customers thread created. And it has the same running time when the input is different.
