@@ -11,7 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="theBanker_v1.cpp" />
+    <ClCompile Include="theBanker_v2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="in.dat" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6A6DCF22-02E9-4A83-98DD-894D2A766873}</ProjectGuid>
