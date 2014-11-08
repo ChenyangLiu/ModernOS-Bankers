@@ -24,8 +24,13 @@ example:
 
 ## Version
 V1:'theBanker_v1.cpp'  
-It uses an int time to sycn. It should crush when lots of customers thread created. And it has the same running time when the input is different.
+It uses an int time to sycn.  
+It should crush when lots of customers thread created.  
+And it has the same running time when the input is different.
 
 V2:'theBanker_v2.cpp'  
-It include events to control time lapse. Use different time when having different input. But there are around 10% probability to get wrong answer or crush, since a 
-process can't wake instantly when the semaphore is released in Win. Another reason is that it's too diffcult to add time factor in IPC for me.
+It include events to control time lapse.  
+Use different time when having different input.  
+Using Sleep(0) to switch process.  
+But there are less than 10% probabilities  getting wrong answer or being crushed, since a process can't wake instantly when the semaphore is released in Win.  
+Another reason is that it's too diffcult to add time factor in IPC for me.

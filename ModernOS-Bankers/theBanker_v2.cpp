@@ -64,6 +64,7 @@ DWORD WINAPI customer(LPVOID lpParam)
 	int *Param;
 	Param = (int*)lpParam;
 	ReleaseSemaphore(cus[Param[0] - 1], 1, NULL);
+	Sleep(0);
 	SetEvent(custime[Param[0] - 1]);
 	/* May add time there, and can't right time that finish service */
 	telNo = WaitForMultipleObjects(tellerNum, servicemutex[Param[0] - 1], false, INFINITE) - WAIT_OBJECT_0 + 1;
@@ -97,6 +98,7 @@ DWORD WINAPI teller(LPVOID lpParam)
 		}
 		ResetEvent(teltime[Param[0]]);
 		ReleaseSemaphore(servicemutex[cusNo][Param[0]], 1, NULL);
+		Sleep(0);
 	}
 	return 0;
 }
